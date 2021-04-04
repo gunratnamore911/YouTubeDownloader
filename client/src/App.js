@@ -41,7 +41,7 @@ const App = ({ videos: { videos }, getvideos }) => {
               <input
                 className="impt"
                 type="text"
-                placeholder="Enter URL or Keywords"
+                placeholder="Search Here"
                 spellCheck="false"
                 value={term}
                 onChange={(e) => {

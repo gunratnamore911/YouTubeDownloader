@@ -40,7 +40,7 @@ input:focus {
 .input_bro {
   margin-top: 1.5rem;
   align-items: center;
-  height: 9vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
 }
