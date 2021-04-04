@@ -1,0 +1,26 @@
+.video_responsive {
+  width: 100%;
+}
+.video__play {
+  width: 100%;
+  height: 70vh;
+}
+.header {
+  color: #ffffff;
+}
+@media screen and (max-width: 854px) {
+  .video__play {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video__play {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .video__play {
+    height: 30vh;
+  }
+}

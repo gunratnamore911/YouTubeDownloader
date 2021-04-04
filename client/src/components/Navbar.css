@@ -1,0 +1,19 @@
+.nav {
+  background-color: rgb(56, 149, 255);
+  width: 100%;
+
+  height: 5vh;
+
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  font-size: 2rem;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  height: 1vh;
+}
+.yo {
+  color: #fff;
+}

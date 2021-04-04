@@ -1,0 +1,35 @@
+.video-item {
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+}
+.group {
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  background-color: #222222;
+}
+.content {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 2px;
+}
+.header {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1230px) {
+  .group {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+  }
+  .video-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}
