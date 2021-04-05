@@ -3,7 +3,6 @@ import axios from "axios";
 import { GET_VIDEOS } from "./types";
 import store from "../store";
 export const getvideos = (term) => async (dispatch) => {
-  console.log(term);
   const config = {
     headers: {
       "Content-Type": "application/json",

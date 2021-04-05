@@ -26,15 +26,7 @@
   outline: none !important;
   border-color: none;
 }
-.red {
-  color: #fff;
-  background-color: #ff5132;
-  border-color: #ff5132;
-}
-.red:hover {
-  background-color: #fff;
-  color: #ff5132;
-}
+
 .header {
   color: #ffffff;
 }
@@ -46,6 +38,9 @@
 @media screen and (max-width: 600px) {
   .video__play {
     height: 40vh;
+  }
+  .green {
+    width: 40%;
   }
 }
 

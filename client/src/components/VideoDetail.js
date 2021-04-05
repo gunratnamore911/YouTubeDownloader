@@ -17,7 +17,7 @@ const VideoDetail = ({ video }) => {
     });
   };
   function sendURL(URL) {
-    if (host == "localhost") {
+    if (host === "localhost") {
       const localh = "http://localhost:5000";
       window.open(`${localh}/download?URL=${URL}`);
     } else {
@@ -46,7 +46,7 @@ const VideoDetail = ({ video }) => {
             onClick={(e) => getmyvideo(`https://youtu.be/${video.id.videoId}`)}
           >
             <GetAppIcon />
-            Video
+            video
           </button>
 
           <h4 className="header">{video.snippet.title}</h4>

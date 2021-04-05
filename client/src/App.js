@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { getvideos } from "./actions/getvideos.js";
 import "./App.css";
@@ -19,13 +19,15 @@ const App = ({ videos: { videos }, getvideos }) => {
   const onvideoselect = (video) => {
     setselectvideo(video);
   };
+  useEffect(() => {
+    getvideos("Otnicka");
+  }, []);
   const formOnSubmit = (e) => {
     e.preventDefault();
     getvideos(term);
     setselectvideo(videos[0]);
   };
 
-  console.log(selectvideo);
   return (
     <Provider store={store}>
       <Fragment>
