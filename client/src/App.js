@@ -23,7 +23,6 @@ const App = ({ videos: { videos }, getvideos }) => {
     e.preventDefault();
     getvideos(term);
     setselectvideo(videos[0]);
-    console.log("ran");
   };
 
   console.log(selectvideo);

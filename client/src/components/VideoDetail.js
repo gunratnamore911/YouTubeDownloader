@@ -12,13 +12,11 @@ const VideoDetail = ({ video }) => {
   const getmyvideo = (id) => {
     const green = document.getElementById("green");
     green.addEventListener("click", function rw() {
-      console.log(`URL:${id}`);
       sendURL(id);
       green.removeEventListener("click", rw);
     });
   };
   function sendURL(URL) {
-    console.log(host);
     if (host == "localhost") {
       const localh = "http://localhost:5000";
       window.open(`${localh}/download?URL=${URL}`);

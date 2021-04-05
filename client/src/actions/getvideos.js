@@ -12,11 +12,10 @@ export const getvideos = (term) => async (dispatch) => {
   const bod = {
     term: term,
   };
-  console.log(bod);
+
   try {
     const getres = await axios.post(`/api/videos/getvideos`, bod, config);
 
-    console.log(getres.data);
     if (getres.data) {
       store.dispatch({
         type: GET_VIDEOS,
