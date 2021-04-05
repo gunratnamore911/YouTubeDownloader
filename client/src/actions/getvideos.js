@@ -23,7 +23,5 @@ export const getvideos = (term) => async (dispatch) => {
         Payload: getres.data,
       });
     }
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };

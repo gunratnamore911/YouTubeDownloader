@@ -6,7 +6,7 @@ import "./VideoList.css";
 const VideoList = (props) => {
   const renderList = props.videos.map((video) => {
     return (
-      <div className="video-list utils">
+      <div className="video-list utils" key={video.id.videoId}>
         <VideoItem
           key={video.id.videoId}
           onvideoselect={props.onvideoselect}

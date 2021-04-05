@@ -4,7 +4,14 @@ import "./VideoItem.css";
 const VideoItem = ({ video, onvideoselect }) => {
   return (
     <div className="group">
-      <div onClick={() => onvideoselect(video)} className="video-item">
+      <div
+        onClick={() => {
+          onvideoselect(video);
+
+          window.scrollTo(0, 0);
+        }}
+        className="video-item"
+      >
         <img
           className="image"
           src={video.snippet.thumbnails.medium.url}

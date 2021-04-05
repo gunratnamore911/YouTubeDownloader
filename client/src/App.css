@@ -28,6 +28,10 @@ input:focus {
 .btn {
   margin-top: 5px;
 }
+
+.credits {
+  text-align: center;
+}
 .btn1:hover {
   width: 50%;
   transform: translateY(-3px);

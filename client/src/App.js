@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { getvideos } from "./actions/getvideos.js";
 import "./App.css";
@@ -12,7 +12,7 @@ import { Provider } from "react-redux";
 import Navbar from "./components/Navbar.js";
 const App = ({ videos: { videos }, getvideos }) => {
   const [term, setterm] = useState("");
-  const [selectvideo, setselectvideo] = useState(videos[0]);
+  const [selectvideo, setselectvideo] = useState();
   const onchange = (e) => {
     setterm(e.target.value);
   };
@@ -22,9 +22,10 @@ const App = ({ videos: { videos }, getvideos }) => {
   const formOnSubmit = (e) => {
     e.preventDefault();
     getvideos(term);
+    setselectvideo(videos[0]);
+    console.log("ran");
   };
 
-  // if (videos) setselectvideo(videos[0]);
   console.log(selectvideo);
   return (
     <Provider store={store}>
@@ -32,6 +33,7 @@ const App = ({ videos: { videos }, getvideos }) => {
         <div className="page">
           <Navbar />
           <h1 className="heading">Download || Watch YouTube Videos</h1>
+          <p className="credits">&copy; coded by Gunratna</p>
           <form
             onSubmit={(e) => {
               formOnSubmit(e);
@@ -65,7 +67,7 @@ const App = ({ videos: { videos }, getvideos }) => {
           </form>
           <div className="whoel-section">
             <div className="left">
-              <VideoDetail video={selectvideo} />
+              <VideoDetail video={selectvideo ? selectvideo : videos[0]} />
             </div>
             <div className="right">
               <VideoList videos={videos} onvideoselect={onvideoselect} />
@@ -73,7 +75,8 @@ const App = ({ videos: { videos }, getvideos }) => {
           </div>
         </div>
         <footer className="last">
-          <h1>&copy; coded by Gunratna More </h1>
+          <br></br>
+          <br></br>
           <br></br>
           <p>@2021 All Rights Reserved</p>
         </footer>
