@@ -9,21 +9,21 @@ const VideoDetail = ({ video }) => {
   //   },
   // };
   const host = window.location.hostname;
-  const getmyvideo = (id) => {
-    const green = document.getElementById("green");
-    green.addEventListener("click", function rw() {
-      sendURL(id);
-      green.removeEventListener("click", rw);
-    });
-  };
-  function sendURL(URL) {
-    if (host === "localhost") {
-      const localh = "http://localhost:5000";
-      window.open(`${localh}/download?URL=${URL}`);
-    } else {
-      window.open(`/download?URL=${URL}`);
-    }
-  }
+  // const getmyvideo = (id) => {
+  //   const green = document.getElementById("green");
+  //   green.addEventListener("click", function rw() {
+  //     sendURL(id);
+  //     green.removeEventListener("click", rw());
+  //   });
+  // };
+  // function sendURL(URL) {
+  //   if (host === "localhost") {
+  //     const localh = "http://localhost:5000";
+  //     window.open(`${localh}/download?URL=${URL}`);
+  //   } else {
+  //     window.open(`/download?URL=${URL}`);
+  //   }
+  // }
 
   if (!video) {
     return <div>Loading...</div>;
@@ -43,7 +43,15 @@ const VideoDetail = ({ video }) => {
           <button
             className="green"
             id="green"
-            onClick={(e) => getmyvideo(`https://youtu.be/${video.id.videoId}`)}
+            onClick={() => {
+              const id = `https://youtu.be/${video.id.videoId}`;
+              if (host === "localhost") {
+                const localh = "http://localhost:5000";
+                window.open(`${localh}/download?URL=${id}`);
+              } else {
+                window.open(`/download?URL=${id}`);
+              }
+            }}
           >
             <GetAppIcon />
             video
@@ -58,4 +66,5 @@ const VideoDetail = ({ video }) => {
 };
 
 export default VideoDetail;
+
 
