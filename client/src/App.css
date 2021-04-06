@@ -13,7 +13,7 @@ html {
   border-color: rgb(56, 149, 255);
   text-align: center;
   box-shadow: 0 0 10px #719ece;
-  height: 4vh;
+  height: 4.5vh;
   font-size: 2rem;
 }
 .last {
@@ -49,6 +49,7 @@ input:focus {
   flex-direction: column;
 }
 .whoel-section {
+  margin-top: 0.3rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -86,3 +87,9 @@ input:focus {
     flex: 1;
   }
 }
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
