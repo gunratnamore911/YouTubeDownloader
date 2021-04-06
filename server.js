@@ -12,12 +12,15 @@ app.use(express.json({ extended: false }));
 app.use("/api/videos", require("./routes/api/getvideos"));
 
 app.get("/download", (req, res) => {
-  var URL = req.query.URL;
-
-  res.header("Content-Disposition", 'attachment; filename="video.mp4"');
-  ytdl(URL, {
-    format: "mp4",
-  }).pipe(res);
+  try {
+    var URL = req.query.URL;
+    res.header("Content-Disposition", 'attachment; filename="video.mp4"');
+    ytdl(URL, {
+      format: "mp4",
+    }).pipe(res);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 //serving static assests
