@@ -21,7 +21,7 @@ const VideoDetail = ({ video }) => {
       const localh = "http://localhost:5000";
       window.open(`${localh}/download?URL=${URL}`);
     } else {
-      window.open(`${host}/download?URL=${URL}`);
+      window.open(`/download?URL=${URL}`);
     }
   }
 
@@ -58,3 +58,4 @@ const VideoDetail = ({ video }) => {
 };
 
 export default VideoDetail;
+
