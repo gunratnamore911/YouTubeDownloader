@@ -20,7 +20,7 @@ const App = ({ videos: { videos }, getvideos }) => {
     setselectvideo(video);
   };
   useEffect(() => {
-    getvideos("Otnicka");
+    getvideos("Master The Blaster");
   }, []);
   const formOnSubmit = (e) => {
     e.preventDefault();
